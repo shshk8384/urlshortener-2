@@ -51,7 +51,7 @@
             if(!$mysql_result) 
                 die("MySQL error: ".mysql_error());
             
-            echo "http://192.168.1.33/urlshortener/".$last_code; // Change domain name
+            echo "http://localhost/urlshortener/".$last_code;
         } else{
             $code = "a";
             $mysql_result = mysql_query("INSERT INTO url (code, url) VALUES ('$code', '$url')");
@@ -59,7 +59,7 @@
             if(!$mysql_result) 
                 die("MySQL error: ".mysql_error());
             
-            echo "http://192.168.1.33/urlshortener/".$code;
+            echo "http://localhost/urlshortener/".$code;
         }
     }
 ?>
