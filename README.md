@@ -28,6 +28,7 @@ Copy all files to a new folder in your web server. Everything must be in a new f
 Now everything in the web must work. Only one more thing is needed. You have to enable mod_rewrite in Apache if you want the web to understand URL like http://domain/urlshortener/a12dad. To enable mod_rewrite in Linux you have to write the next command in a shell:
 
     sudo a2enmod rewrite
+    sudo service apache2 restart
 
 And that's all.
 
