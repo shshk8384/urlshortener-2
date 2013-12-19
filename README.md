@@ -16,13 +16,9 @@ Setup
 Copy all files to a new folder in your web server. Everything must be in a new folder, because the .htaccess file affects everything in its folder. Once you have copied everything you have to create a database and a table in MySQL. In MySQL follow the next steps:
 
     CREATE DATABASE shortener;
-    
     CREATE USER 'shortener'@'localhost' IDENTIFIED BY '5h0rt3n3r';
-  
     GRANT ALL PRIVILEGES ON shortener . * TO 'shortener'@'localhost';
-  
     USE shortener;
-  
     CREATE TABLE url (id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, code VARCHAR(256), url VARCHAR(3000));
 
 Now everything in the web must work. Only one more thing is needed. You have to enable mod_rewrite in Apache if you want the web to understand URL like http://domain/urlshortener/a12dad. To enable mod_rewrite in Linux you have to write the next command in a shell:
@@ -52,3 +48,7 @@ Inside style folder:
 
 - **style.css**: stylesheet for all the web page.
 
+Android client
+--------------
+
+You have an Android client in other repository: https://github.com/susomena/URL-Shortener-Android-Client
